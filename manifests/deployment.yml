@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vishaldevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vishaldevops
+  template:
+    metadata:
+      labels:
+        app: vishaldevops 
+    spec:
+      containers:
+        - name: vishaldevops 
+          image: myacrnew23.azurecr.io/vishaldevops
+          ports:
+          - containerPort: 80
